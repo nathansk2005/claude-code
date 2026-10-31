@@ -45,6 +45,23 @@ For more installation options, uninstall steps, and troubleshooting, see the [se
 
 2. Navigate to your project directory and run `claude`.
 
+## Working from an iPhone
+
+Claude Code doesn't run on iOS, but you can work with this repository from an iPhone:
+
+- **Claude app:** start a Claude Code session on the web and follow it in the app. Claude edits, tests, and pushes code from the cloud.
+- **GitHub app:** review what was pushed.
+- **[a-Shell](https://holzschu.github.io/a-Shell_iOS/):** a terminal that runs Python, JavaScript, and shell scripts. Use `lg2` instead of `git`:
+    ```bash
+    lg2 clone https://github.com/nathansk2005/claude-code.git
+    ```
+- **[iSH](https://ish.app/):** a slower but full Alpine Linux shell with the regular `git` command:
+    ```bash
+    apk add git
+    git clone https://github.com/nathansk2005/claude-code.git
+    ```
+- **Working Copy:** a Git client with buttons instead of commands.
+
 ## Plugins
 
 Anthropic's Claude Code plugins are developed in [claude-plugins-official](https://github.com/anthropics/claude-plugins-official). See the [plugins directory](./plugins/README.md) for more about plugins.
