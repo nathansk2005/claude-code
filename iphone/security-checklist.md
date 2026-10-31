@@ -64,6 +64,6 @@ Install it before step 3 below: Lockdown Mode blocks installing profiles.
 | Web | Rejects untrusted HTTPS certificates without asking, forces Safari's fraudulent website warning and cross-site tracking prevention, and requires trusted TLS for AirPrint. |
 | Apps and privacy | Blocks trusting apps from enterprise developer certificates (a common way to sideload malware), stops ad tracking requests and diagnostics, and forces encrypted backups. |
 
-Some settings in the profile only take effect on a supervised iPhone (set up with Apple Configurator, which erases the phone): blocking the DNS from being turned off, blocking other profiles from being installed, requiring Face ID before password autofill, and forcing automatic date and time. On a personal iPhone they are ignored, and you can remove the profile at any time in **Settings → General → VPN & Device Management**.
+The profile only uses settings that work on a personal iPhone. You can remove it at any time in **Settings → General → VPN & Device Management**. Locking the profile or the DNS setting in place needs a supervised iPhone (set up again with Apple Configurator, which erases the phone), and iOS refuses to install a profile that asks for that on any other iPhone.
 
 The profile isn't signed, so iOS shows it as **Unverified** when you install it. That is expected.

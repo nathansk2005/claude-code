@@ -59,8 +59,6 @@
 					<string>Connect</string>
 				</dict>
 			</array>
-			<key>ProhibitDisablement</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>PayloadDisplayName</key>
@@ -124,7 +122,7 @@
 			<key>safariForceFraudWarning</key>
 			<true/>
 			<key>safariAcceptCookies</key>
-			<integer>1</integer>
+			<real>1.0</real>
 			<key>allowEnterpriseAppTrust</key>
 			<false/>
 			<key>forceLimitAdTracking</key>
@@ -135,12 +133,6 @@
 			<true/>
 			<key>forceWatchWristDetection</key>
 			<true/>
-			<key>forceAuthenticationBeforeAutoFill</key>
-			<true/>
-			<key>forceAutomaticDateAndTime</key>
-			<true/>
-			<key>allowUIConfigurationProfileInstallation</key>
-			<false/>
 		</dict>
 	</array>
 </dict>
