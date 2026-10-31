@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadDisplayName</key>
+	<string>iPhone Max Security</string>
+	<key>PayloadDescription</key>
+	<string>Encrypted malware-blocking DNS, a strong passcode policy, and lock screen, Safari and app restrictions.</string>
+	<key>PayloadIdentifier</key>
+	<string>local.networksafety.profile</string>
+	<key>PayloadOrganization</key>
+	<string>Network Safety</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7080ED4B-EEE9-4FAC-B0D6-BF0ECF206490</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>This profile makes you set a passcode of at least 8 characters with letters, numbers and a symbol, and ERASES this iPhone after 10 wrong passcode attempts. Make sure your iPhone is backed up before installing.</string>
+	</dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Quad9 Encrypted DNS</string>
+			<key>PayloadDescription</key>
+			<string>Sends every DNS lookup over encrypted DNS-over-HTTPS to Quad9, which blocks malware, phishing and scam domains.</string>
+			<key>PayloadIdentifier</key>
+			<string>local.networksafety.profile.com.apple.dnsSettings.managed.0D41A238-D054-4971-88E4-830D10C2CE1E</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>0D41A238-D054-4971-88E4-830D10C2CE1E</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://dns.quad9.net/dns-query</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>9.9.9.9</string>
+					<string>149.112.112.112</string>
+					<string>2620:fe::fe</string>
+					<string>2620:fe::9</string>
+				</array>
+			</dict>
+			<key>OnDemandRules</key>
+			<array>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+				</dict>
+			</array>
+			<key>ProhibitDisablement</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Strong Passcode</string>
+			<key>PayloadDescription</key>
+			<string>Requires an 8+ character passcode with letters, numbers and a symbol, locks after 1 minute, and erases the iPhone after 10 wrong attempts.</string>
+			<key>PayloadIdentifier</key>
+			<string>local.networksafety.profile.com.apple.mobiledevice.passwordpolicy.3E75EE0F-9866-4D02-BDF9-030D34631156</string>
+			<key>PayloadType</key>
+			<string>com.apple.mobiledevice.passwordpolicy</string>
+			<key>PayloadUUID</key>
+			<string>3E75EE0F-9866-4D02-BDF9-030D34631156</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>forcePIN</key>
+			<true/>
+			<key>allowSimple</key>
+			<false/>
+			<key>requireAlphanumeric</key>
+			<true/>
+			<key>minLength</key>
+			<integer>8</integer>
+			<key>minComplexChars</key>
+			<integer>1</integer>
+			<key>maxInactivity</key>
+			<integer>1</integer>
+			<key>maxGracePeriod</key>
+			<integer>0</integer>
+			<key>maxFailedAttempts</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Security Restrictions</string>
+			<key>PayloadDescription</key>
+			<string>Hardens the lock screen, Safari, backups and app installs.</string>
+			<key>PayloadIdentifier</key>
+			<string>local.networksafety.profile.com.apple.applicationaccess.F2B0B560-0FC9-4B4A-8CAE-51A4D5815AE4</string>
+			<key>PayloadType</key>
+			<string>com.apple.applicationaccess</string>
+			<key>PayloadUUID</key>
+			<string>F2B0B560-0FC9-4B4A-8CAE-51A4D5815AE4</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>allowLockScreenControlCenter</key>
+			<false/>
+			<key>allowLockScreenNotificationsView</key>
+			<false/>
+			<key>allowLockScreenTodayView</key>
+			<false/>
+			<key>allowAssistantWhileLocked</key>
+			<false/>
+			<key>allowVoiceDialing</key>
+			<false/>
+			<key>allowPassbookWhileLocked</key>
+			<false/>
+			<key>allowUntrustedTLSPrompt</key>
+			<false/>
+			<key>forceAirPrintTrustedTLSRequirement</key>
+			<true/>
+			<key>safariForceFraudWarning</key>
+			<true/>
+			<key>safariAcceptCookies</key>
+			<integer>1</integer>
+			<key>allowEnterpriseAppTrust</key>
+			<false/>
+			<key>forceLimitAdTracking</key>
+			<true/>
+			<key>allowDiagnosticSubmission</key>
+			<false/>
+			<key>forceEncryptedBackup</key>
+			<true/>
+			<key>forceWatchWristDetection</key>
+			<true/>
+			<key>forceAuthenticationBeforeAutoFill</key>
+			<true/>
+			<key>forceAutomaticDateAndTime</key>
+			<true/>
+			<key>allowUIConfigurationProfileInstallation</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>
