@@ -20,6 +20,17 @@ These may be applied at any level of the [settings hierarchy](https://code.claud
 | Bash tool requires approval | | ✅ | |
 | Bash tool must run inside of sandbox | | | ✅ |
 
+## Network lockdown
+
+[`settings-network-lockdown.json`](./settings-network-lockdown.json) is a managed settings file for computers where Claude Code should reach no network host beyond its own API. [`../mdm/macos/com.anthropic.claudecode.network-lockdown.mobileconfig`](../mdm/macos/com.anthropic.claudecode.network-lockdown.mobileconfig) deploys the same settings as a macOS configuration profile.
+
+- Bash commands always run in the sandbox, with no unsandboxed fallback, and Claude Code exits at startup if the sandbox can't start. Each command still needs approval.
+- Sandboxed commands reach no host: `allowedDomains` is empty, only managed settings can add to it, and local ports and Unix sockets are blocked.
+- WebFetch, WebSearch, Projects, SendUserFile, ShareOnboardingGuide and Artifact are denied, and artifact publishing, Remote Control, inbound messages from other sessions and claude.ai skill and plugin sync are off.
+- No MCP servers, plugin marketplaces, HTTP hooks, user hooks or user permission rules load, and bypass permissions mode is removed.
+
+Add your Git host and package registry to `sandbox.network.allowedDomains` if developers need them; as shipped, `git fetch` and package installs fail inside the sandbox. On Linux and WSL2, install bubblewrap and socat first. The sandbox covers Bash only: an approved hook, MCP server, or a command a developer types at the `!` prompt runs outside it.
+
 ## Tips
 - Consider merging snippets of the above examples to reach your desired configuration
 - Settings files must be valid JSON

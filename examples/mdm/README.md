@@ -15,6 +15,7 @@ All templates encode the same minimal example (`permissions.disableBypassPermiss
 | [`managed-settings.json`](./managed-settings.json) | Any platform. Deploy to the [system config directory](https://code.claude.com/docs/en/settings#settings-files). |
 | [`macos/com.anthropic.claudecode.plist`](./macos/com.anthropic.claudecode.plist) | Jamf or Iru (Kandji) **Custom Settings** payload. Preference domain: `com.anthropic.claudecode`. |
 | [`macos/com.anthropic.claudecode.mobileconfig`](./macos/com.anthropic.claudecode.mobileconfig) | Full configuration profile for local testing or MDMs that take a complete profile. |
+| [`macos/com.anthropic.claudecode.network-lockdown.mobileconfig`](./macos/com.anthropic.claudecode.network-lockdown.mobileconfig) | Full configuration profile that deploys [`settings-network-lockdown.json`](../settings/settings-network-lockdown.json): sandboxed commands reach no host, and web, upload and remote-session features are off. |
 | [`windows/Set-ClaudeCodePolicy.ps1`](./windows/Set-ClaudeCodePolicy.ps1) | Intune **Platform scripts**. Writes `managed-settings.json` to `C:\Program Files\ClaudeCode\`. |
 | [`windows/ClaudeCode.admx`](./windows/ClaudeCode.admx) + [`en-US/ClaudeCode.adml`](./windows/en-US/ClaudeCode.adml) | Group Policy or Intune **Import ADMX**. Writes `HKLM\SOFTWARE\Policies\ClaudeCode\Settings` (REG_SZ, single-line JSON). |
 
