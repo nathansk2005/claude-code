@@ -9,7 +9,7 @@ Setting names follow current iOS and may move slightly in newer versions.
 1. Back up your iPhone. The profile erases it after 10 wrong passcode attempts.
 2. Open the profile on your iPhone (AirDrop it, or open it from Files).
 3. Go to **Settings → Profile Downloaded → Install**.
-4. Set the new passcode when asked: at least 12 characters, with letters, numbers and a symbol.
+4. Set the new passcode when asked: at least 6 characters.
 
 Install it before step 3 below: Lockdown Mode blocks installing profiles.
 
@@ -59,7 +59,7 @@ Install it before step 3 below: Lockdown Mode blocks installing profiles.
 | Part | What it does |
 |---|---|
 | Encrypted DNS | Every website lookup goes to Quad9 over HTTPS. Quad9 blocks known malware, phishing and scam sites, and your network can't see or change your lookups. A VPN, while on, uses its own DNS instead. |
-| Passcode | 12+ characters with letters, numbers and a symbol; can't reuse your last 5 passcodes; changes every 180 days; locks after 1 minute; asks for the passcode as soon as the screen locks; erases the iPhone after 10 wrong attempts. |
+| Passcode | 6+ characters, letters or numbers; locks after 1 minute; asks for the passcode as soon as the screen locks; erases the iPhone after 10 wrong attempts. |
 | Lock screen | No Control Center (stops thieves switching on Airplane Mode to hide from Find My), no notifications or widgets (hides sign-in codes), no Siri, voice dialing or Wallet. |
 | Web | Rejects untrusted HTTPS certificates without asking, forces Safari's fraudulent website warning and cross-site tracking prevention, and requires trusted TLS for AirPrint. |
 | Apps and privacy | Blocks trusting apps from enterprise developer certificates (a common way to sideload malware), stops ad tracking requests and diagnostics, and forces encrypted backups. |

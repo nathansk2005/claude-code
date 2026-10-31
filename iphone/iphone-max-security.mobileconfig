@@ -21,7 +21,7 @@
 	<key>ConsentText</key>
 	<dict>
 		<key>default</key>
-		<string>This profile makes you set a passcode of at least 12 characters with letters, numbers and a symbol, and ERASES this iPhone after 10 wrong passcode attempts. Make sure your iPhone is backed up before installing.</string>
+		<string>This profile makes you set a passcode of at least 6 characters, and ERASES this iPhone after 10 wrong passcode attempts. Make sure your iPhone is backed up before installing.</string>
 	</dict>
 	<key>PayloadContent</key>
 	<array>
@@ -64,7 +64,7 @@
 			<key>PayloadDisplayName</key>
 			<string>Strong Passcode</string>
 			<key>PayloadDescription</key>
-			<string>Requires a 12+ character passcode with letters, numbers and a symbol, blocks reuse of your last 5 passcodes, asks for a new one every 180 days, locks after 1 minute, and erases the iPhone after 10 wrong attempts.</string>
+			<string>Requires a 6+ digit or character passcode, locks after 1 minute, and erases the iPhone after 10 wrong attempts.</string>
 			<key>PayloadIdentifier</key>
 			<string>local.networksafety.profile.com.apple.mobiledevice.passwordpolicy.3E75EE0F-9866-4D02-BDF9-030D34631156</string>
 			<key>PayloadType</key>
@@ -76,23 +76,19 @@
 			<key>forcePIN</key>
 			<true/>
 			<key>allowSimple</key>
-			<false/>
-			<key>requireAlphanumeric</key>
 			<true/>
+			<key>requireAlphanumeric</key>
+			<false/>
 			<key>minLength</key>
-			<integer>12</integer>
+			<integer>6</integer>
 			<key>minComplexChars</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>maxInactivity</key>
 			<integer>1</integer>
 			<key>maxGracePeriod</key>
 			<integer>0</integer>
 			<key>maxFailedAttempts</key>
 			<integer>10</integer>
-			<key>pinHistory</key>
-			<integer>5</integer>
-			<key>maxPINAgeInDays</key>
-			<integer>180</integer>
 		</dict>
 		<dict>
 			<key>PayloadDisplayName</key>
