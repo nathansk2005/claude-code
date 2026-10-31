@@ -11,6 +11,9 @@ Tasks are saved encrypted in todo.enc next to this script. You choose a password
 the first time and type it each time you run the script. To skip typing it for
 the rest of a terminal session, run: export TODO_PASSWORD='your password'
 
+In a-Shell the password is shown while you type it, because hidden typing does
+not work there, and the screen is cleared right after.
+
 There is no way to recover the list if you forget the password.
 
 An unencrypted todo.json from an older version is encrypted and deleted on the
@@ -78,18 +81,28 @@ def decrypt(password, blob):
     return keys, salt, keystream_xor(keys[0], nonce, ciphertext)
 
 
+def read_password(prompt):
+    # Hidden typing does not work reliably in a-Shell, so on an iPhone or iPad
+    # the password is shown while typing and the screen is cleared afterwards.
+    if os.uname().machine.startswith(("iPhone", "iPad")):
+        password = input(prompt + "(visible) ")
+        print("\033[2J\033[H", end="")
+        return password
+    return getpass.getpass(prompt)
+
+
 def ask_password(new):
     password = os.environ.get("TODO_PASSWORD")
     if password:
         return password
     if not new:
-        return getpass.getpass("Password: ")
+        return read_password("Password: ")
     print("Choose a password for your to-do list. If you forget it, the list cannot be recovered.")
     while True:
-        password = getpass.getpass("New password: ")
+        password = read_password("New password: ")
         if not password:
             print("The password cannot be empty.")
-        elif password != getpass.getpass("Type it again: "):
+        elif password != read_password("Type it again: "):
             print("The passwords did not match. Try again.")
         else:
             return password
