@@ -42,6 +42,7 @@ Install it before step 3 below: Lockdown Mode blocks installing profiles.
 ## 5. Apps and browsing
 
 - **Settings → Apps → Safari → Advanced → Advanced Tracking and Fingerprinting Protection**: **All Browsing**.
+- **Settings → Apps → Safari → Block All Cookies**: on. This is the strictest cookie setting, and some sites may ask you to sign in again.
 - **Settings → Apps → Mail → Privacy Protection → Protect Mail Activity**: on.
 - **Settings → Apps → Messages**: screen or filter unknown senders.
 - **Settings → Apps → Phone**: screen or silence unknown callers.
@@ -61,7 +62,7 @@ Install it before step 3 below: Lockdown Mode blocks installing profiles.
 | Encrypted DNS | Every website lookup goes to Quad9 over HTTPS. Quad9 blocks known malware, phishing and scam sites, and your network can't see or change your lookups. A VPN, while on, uses its own DNS instead. |
 | Passcode | 6+ characters, letters or numbers; locks after 1 minute; asks for the passcode as soon as the screen locks; erases the iPhone after 10 wrong attempts. |
 | Lock screen | No Control Center (stops thieves switching on Airplane Mode to hide from Find My), no notifications or widgets (hides sign-in codes), no Siri, voice dialing or Wallet. |
-| Web | Rejects untrusted HTTPS certificates without asking, forces Safari's fraudulent website warning and cross-site tracking prevention, and requires trusted TLS for AirPrint. |
+| Web | Blocks all Safari cookies, rejects untrusted HTTPS certificates without asking, forces Safari's fraudulent website warning, and requires trusted TLS for AirPrint. Some sites that need cookies to sign you in may not work. |
 | Apps and privacy | Blocks trusting apps from enterprise developer certificates (a common way to sideload malware), stops ad tracking requests and diagnostics, and forces encrypted backups. |
 
 The profile only uses settings that work on a personal iPhone. You can remove it at any time in **Settings → General → VPN & Device Management**. Locking the profile or the DNS setting in place needs a supervised iPhone (set up again with Apple Configurator, which erases the phone), and iOS refuses to install a profile that asks for that on any other iPhone.
